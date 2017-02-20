@@ -10,8 +10,12 @@ const rl = readline.createInterface({
 const client = net.createConnection({port: port}, () => {
   const address = client.address()
   console.log(`Connected to server on ${address.address}: ${address.port}`)
-  rl.question('', input => {
-    client.write(input)
-  })
+  recursiveAsyncReadLine()
 })
 
+const recursiveAsyncReadLine = () => {
+  rl.question('', answer => {
+    client.write(answer)
+    recursiveAsyncReadLine()
+  })
+}
