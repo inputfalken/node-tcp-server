@@ -1,3 +1,4 @@
+/* @flow */
 const net = require('net')
 const port = 8124
 const readline = require('readline')

@@ -1,3 +1,4 @@
+/* @flow */
 const port = 8124
 const ip = '127.0.0.1'
 const net = require('net')
