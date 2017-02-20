@@ -2,6 +2,7 @@ const port = 8124
 const ip = '127.0.0.1'
 const net = require('net')
 const server = net.createServer(client => {
+  client.setEncoding('utf8')
   console.log('client connected')
   client.on('end', () => {
     console.log('client disconnected')
