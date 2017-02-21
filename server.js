@@ -1,8 +1,8 @@
 /* @flow */
+const net = require('net')
 const port = 8124
 const hostname = '127.0.0.1'
 const backlog = 100
-const net = require('net')
 const server = net.createServer(client => {
   client.setEncoding('utf8')
   console.log('client connected')

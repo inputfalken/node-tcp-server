@@ -1,7 +1,7 @@
 /* @flow */
 const net = require('net')
-const port = 8124
 const readline = require('readline')
+const port = 8124
 
 const rl = readline.createInterface({
   input: process.stdin,
